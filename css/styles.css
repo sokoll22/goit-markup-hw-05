@@ -195,7 +195,7 @@ p {
 } 
 /* Only for background color -- later to delete */
 .contacts-item {
-  
+
 }
 /* Adding margin-left for all ".contact .items"
  except first one. Reading from bottom to top item. 
@@ -205,7 +205,7 @@ p {
 }
 .contacts .link {
   display: flex;
-  align-items: unset;
+  /* align-items: unset; */
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -218,7 +218,11 @@ p {
   transition-delay: var(--transition-delay-var);
   transition-timing-function: var(--timing-func);
   }
-
+.mail-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .mail-link:hover,
 .mail-link:focus {
   color: var(--accent-color);
@@ -228,6 +232,7 @@ p {
   fill: var(--accent-color);
 }
 .icon-envelope {
+  vertical-align: baseline;
   width: 16px;
   height: 12px;
   margin-right: 10px;
@@ -750,6 +755,14 @@ p {
 .footer-form {
 
 }
+.footer-list-item-link {
+  transition-delay: var(--transition-delay-var); 
+  transition-timing-function: var(--timing-func);
+}
+.footer-list-item-link:hover,
+.footer-list-item-link:focus {
+  color: var(--accent-color);
+}
 .footer-form-title {
   color: var(--main-background-color);
   font-weight: 700;
@@ -785,7 +798,8 @@ p {
   fill: var(--main-background-color);
 }
 
-.footer-form-items:hover {
+.footer-form-items:hover,
+.footer-form-items:focus {
   background-color: var(--accent-color);
 }
 
@@ -821,7 +835,6 @@ p {
   width: 30px;
   height: 30px;
   background: transparent;
-  /* border: 1px solid rgba(0,0,0,0,1); */
   border-radius: 50%;
   cursor: pointer;
 }
